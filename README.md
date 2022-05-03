@@ -1,10 +1,12 @@
 # Software Engineering Summit — Full Stack Applied Lesson
 
 ## Environment Requirements
+
 Ensure that Node version >= 14.0.0 and npm version>= 5.6 are installed on your machine. You can install node here: https://nodejs.org/en/
 
 ## Run `fullstack-movie-picker`
-The fullstack-movie-picker repo includes completed code for a React website. In order to run the movie-picker application, clone or download this repo then run the following:
+
+The fullstack-movie-picker repo includes completed code for a React website. In order to run the movie-picker frontend, clone or download this repo then run the following:
 
 ```cd SES-React-Lesson
 cd fullstack-movie-picker
@@ -12,9 +14,12 @@ npm install
 npm start
 ```
 
+In order to run the backend, follow instructions on the APIs-101 Repo
+
 View running application at http://localhost:3000
 
 ## Create a New React Project
+
 Run the following commands:
 
 ```
