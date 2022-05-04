@@ -3,12 +3,13 @@ import './Movie.css'
 
 const Movie = ({name, genre, image}) => {
     return (
-        <div>
+        <div className="movie">
             <img src={image}></img>
-            <p>{name}</p>
-            <p>{genre}</p>
+            <p className="movieName">{name}</p>
+            <p className="movieGenre">{genre}</p>
         </div>
     )
 }
 
 export default Movie
+

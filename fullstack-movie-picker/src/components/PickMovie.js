@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import Movie from './Movie';
-import {data} from '../data/data'
 import './PickMovie.css'
 
 const PickMovie = () => {

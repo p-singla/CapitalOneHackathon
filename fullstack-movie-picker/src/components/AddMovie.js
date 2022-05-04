@@ -1,7 +1,10 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 import './AddMovie.css'
 
 const AddMovie = () => {
+    let navigate = useNavigate();
+
     const [name, setName] = useState('')
     const [genre, setGenre] = useState('')
     const [image, setImage] = useState('')
@@ -31,13 +34,13 @@ const AddMovie = () => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(newMovie)
-        })
+        }).then(navigate("../", ({replace: true})))
     }
 
 
     return (
         <div className="form">
-            <h1>Add Movie</h1>
+            <h1 className="title">Add Movie</h1>
             <label>Movie Title</label>
             <input onChange={nameHandler}></input>
             <label>Genre</label>
