@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Catalog from './components/Homepage';
-import PickMovie from './components/ShowSuggestion';
-import AddMovie from './components/AddCard';
+import Homepage from './components/Homepage';
+import ShowSuggestion from './components/ShowSuggestion';
+import AddCard from './components/AddCard';
+import AddCard from './components/AddPriority';
 import Header from './components/Header';
 import './App.css';
 
