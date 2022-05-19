@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import Movie from './Card'
-import './Catalog.css'
+import './Homepage.css'
 
 const Catalog = () => {
     const [data, setData] = useState([]);

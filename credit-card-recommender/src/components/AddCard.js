@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
-import './AddMovie.css'
+import './AddCard.css'
 
 const AddMovie = () => {
     let navigate = useNavigate();

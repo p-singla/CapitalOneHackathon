@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Movie from './Card';
-import './PickMovie.css'
+import './ShowSuggestion.css'
 
 const PickMovie = () => {
     const [randomMovie, setRandomMovie] = useState({});
