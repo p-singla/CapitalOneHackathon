@@ -7,9 +7,10 @@ const Header = () => {
         <div className="header">
             <h1 className="logo"> Movie Picker</h1>
             <div className="links">
-                <Link to="/movie">Pick Movie</Link>
-                <Link to="/">Movie Catalog</Link>
-                <Link to="/add">Add a Movie</Link>
+                <Link to="/showsuggestion">Show Card Recommendation</Link>
+                <Link to="/">Homepage</Link>
+                <Link to="/addcard">Add a Card</Link>
+                <Link to="/addpriority">Choose Your Priority</Link>
             </div>
         </div>
     )

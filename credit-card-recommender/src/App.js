@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Homepage from './components/Homepage';
 import ShowSuggestion from './components/ShowSuggestion';
 import AddCard from './components/AddCard';
-import AddCard from './components/AddPriority';
+import AddPriority from './components/AddPriority';
 import Header from './components/Header';
 import './App.css';
 
