@@ -2,42 +2,43 @@ import React, {useState, useEffect} from 'react'
 import Movie from './Card';
 import './ShowSuggestion.css'
 
+const Dropdown = ({ label, value, options, onChange }) => {
+  return (
+    <label>
+      {label}
+      <select value={value} onChange={onChange}>
+        {options.map((option) => (
+          <option value={option.value}>{option.label}</option>
+        ))}
+      </select>
+    </label>
+  );
+};
 const PickMovie = () => {
-    const [randomMovie, setRandomMovie] = useState({});
-    const [picked, setPicked] = useState(false)
-    const [data, setData] = useState([]);
+ const [food, setFood] = React.useState('TestCard1');
 
-    useEffect(() => {
-        fetch('http://localhost:8080/api/movies')
-        .then(response => response.json())
-        .then(json => setData(json))
-    }, [])
+  const handleFoodChange = (event) => {
+    setFood(event.target.value);
+  };
 
-    const  moviePicker = () => {
-        const random = data[Math.floor(Math.random() * data.length)];
-        console.log(randomMovie)
-        setRandomMovie(random);
-        setPicked(true);
-    }
 
-    const pickAgain = () => {
-        setPicked(false)
-    }
-    return (
+  return (
+    <div>
+      <Dropdown
+        label="What category are you shopping in?"
+        options={[
+          { label: 'Travel', value: 'TestCard1' },
+          { label: 'Retail', value: 'TestCard0' },
+          { label: 'Dining', value: 'TestCard2' },
+        ]}
+        value={food}
+        onChange={handleFoodChange}
+      />
 
-        <div>
-            <h1>Pick Movie</h1>
-            {picked && 
-            <div className ="picked">
-                <div></div>
-                <Movie name={randomMovie.name} image={randomMovie.img} genre={randomMovie.genre}/>
-                <button className="pickButton" onClick={pickAgain} >Pick Again</button>
-            </div>}
-            {!picked && <button onClick={moviePicker}>Pick a Movie</button>}
-            
-            
+      <p>We recommend using your {food}!</p>
         </div>
-    )
-}
+  );
+};
+
 
 export default PickMovie
