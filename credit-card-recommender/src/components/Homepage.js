@@ -12,7 +12,9 @@ const Catalog = () => {
     }, [])*/
     return (
       <div>
-        <h1 className="title">Welcome to RewardsMax!</h1>
+        <h1 className="title">Welcome to Reward Yourself!</h1>
+        
+        
         <p className="home-description-1">
           We're here to help make your credit work for you.
         </p>
@@ -21,20 +23,19 @@ const Catalog = () => {
           you to maximize your rewards as you shop online.
         </p>
         <h1 className="title">What would you like to do today?</h1>
-        
-          <Link to={"/AddCard"}>
-            <input type="submit" value="Add Card" />
-          </Link>
-          <Link to={"/AddPriority"}>
-            <input type="submit" value="Choose Priority" />
-          </Link>
-          <Link to={"/ShowSuggestion"}>
-            <input type="submit" value="Show Card Recommendations" />
-          </Link>
-          <Link to={"/Card"}>
-            <input type="submit" value="Go To My Dashboard" />
-          </Link>
-        
+
+        <Link to={"/AddCard"}>
+          <input type="submit" value="Add Card" />
+        </Link>
+        <Link to={"/AddPriority"}>
+          <input type="submit" value="Choose Priority" />
+        </Link>
+        <Link to={"/ShowSuggestion"}>
+          <input type="submit" value="Show Card Recommendations" />
+        </Link>
+        <Link to={"/Card"}>
+          <input type="submit" value="Go To My Dashboard" />
+        </Link>
       </div>
     );
 }

@@ -4,18 +4,18 @@
   justify-content: space-evenly;
   height: 100px;
   background-color: #cc8d05;
- color: #001fb8;
+  color: #000;
 }
 
 .logo {
-  font-family: 'Belleza', sans-serif;
+  font-family: "Helvetica", sans-serif;
 }
 
 .links {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
