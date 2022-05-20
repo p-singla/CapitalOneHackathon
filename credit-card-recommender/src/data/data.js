@@ -83,6 +83,9 @@ export const pointsCards = [
     }
 ]
 
+export const currCards = []
+
+
 // export const data = [
 //     {
 //         img: "https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
