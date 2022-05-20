@@ -27,9 +27,10 @@ const PickMovie = () => {
       <Dropdown
         label="What category are you shopping in?"
         options={[
-          { label: 'Travel', value: 'TestCard1' },
-          { label: 'Retail', value: 'TestCard0' },
-          { label: 'Dining', value: 'TestCard2' },
+          { label: 'Travel', value: 'Chase Freedom Unlimited' },
+          { label: 'Grocery', value: 'American Express Blue Cash Preferred' },
+          { label: 'Gas', value: 'U.S. Bank Altitude® Connect Visa Signature' },
+          { label: 'Dining', value: 'Chase Sapphire Preferred' },
         ]}
         value={food}
         onChange={handleFoodChange}
