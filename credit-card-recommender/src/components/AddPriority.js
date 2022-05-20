@@ -2,54 +2,46 @@ import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import './AddPriority.css'
 
-const AddPriority = () => {
-    let navigate = useNavigate();
-
-    const [name, setName] = useState('')
-    const [genre, setGenre] = useState('')
-    const [image, setImage] = useState('')
-
-    const nameHandler = (event) => {
-        setName(event.target.value);
-    }
-
-    const genreHandler = (event) => {
-        setGenre(event.target.value);
-    }
-
-    const imageHandler = (event) => {
-        setImage(event.target.value);
-    }
-
-    const addPriorityHandler = (event) => {
-        const newPriority = {
-            name: name,
-            genre: genre,
-            img: image
-        }
-        fetch('http://localhost:8080/api/movies', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newPriority)
-        }).then(navigate("../", ({replace: true})))
-    }
-
-
+const Dropdown = ({ label, value, options, onChange }) => {
     return (
-        <div className="form">
-            <h1 className="title">Add Movie</h1>
-            <label>Movie Title</label>
-            <input onChange={nameHandler}></input>
-            <label>Genre</label>
-            <input onChange={genreHandler}></input>
-            <label>Image</label>
-            <input onChange={imageHandler}></input>
-            <button onClick={addPriorityHandler}>Add Movie</button>
+      <label>
+        {label}
+        <select value={value} onChange={onChange}>
+          {options.map((option) => (
+            <option value={option.value}>{option.label}</option>
+          ))}
+        </select>
+      </label>
+    );
+  };
+  const PickPriority = () => {
+   const [priority, setPriority] = React.useState('TestCard1');
+  
+    const handlePriorityChange = (event) => {
+      setPriority(event.target.value);
+    };
+  
+  
+    return (
+        <div>
+            <h1>What Reward Would You Like to Prioritize?</h1>
+            <Dropdown
+            label="Pick an Option"
+            options={[
+                { label: 'Cashback', value: 'TestCard1' },
+                { label: 'Airline Miles', value: 'TestCard0' },
+                { label: 'Points', value: 'TestCard2' },
+            ]}
+            value={priority}
+            onChange={handlePriorityChange}
+            />
+            <section>
+                <button>Enter</button>
+                <button>Back</button>
+            </section>
+            
         </div>
-    )
-}
-
-export default AddPriority
+    );
+  };
+  
+export default PickPriority
